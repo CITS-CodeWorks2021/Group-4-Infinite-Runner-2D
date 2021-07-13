@@ -4,26 +4,70 @@ using UnityEngine;
 
 public class CharacterControls : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    Rigidbody2D rb2d;
+    private float moveSpeed = 5;
+
+
+    public const string RIGHT = "right";
+    public const string LEFT = "left";
+    public const string UP = "up";
+    public const string DOWN = "down";
+
+    string buttonPressed;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Jump();
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement * Time.deltaTime * moveSpeed;
-    }
-
-    void Jump()
-    {
-        if (Input.GetButtonDown("Jump"))
+        if(Input.GetKey(KeyCode.RightArrow))
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+            buttonPressed = RIGHT;
+        }
+        else if(Input.GetKey(KeyCode.LeftArrow))
+        {
+            buttonPressed = LEFT;
+        }
+        else if(Input.GetKey(KeyCode.UpArrow))
+        {
+            buttonPressed = UP;
+        }
+        else if(Input.GetKey(KeyCode.DownArrow))
+        {
+            buttonPressed = DOWN;
+        }
+        else
+        {
+            buttonPressed = null;
         }
     }
+
+    private void FixedUpdate()
+    {
+        if(buttonPressed == RIGHT)
+        {
+            rb2d.velocity = new Vector2(moveSpeed, 0);
+        }
+        else if(buttonPressed == LEFT)
+        {
+            rb2d.velocity = new Vector2(-moveSpeed, 0);
+        }
+        else if(buttonPressed == UP)
+        {
+            rb2d.velocity = new Vector2(0, moveSpeed);
+        }
+        else if(buttonPressed == DOWN)
+        {
+            rb2d.velocity = new Vector2(0, -moveSpeed);
+        }
+        else
+        {
+            rb2d.velocity = new Vector2(0, 0);
+        }
+    }
+
 }
