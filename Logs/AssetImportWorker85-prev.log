@@ -12,18 +12,7 @@ AssetImportWorker85
 -logFile
 Logs/AssetImportWorker85.log
 -srvPort
-56746
+59131
 Successfully changed project path to: /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
 /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 793.26 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.12f1 (b3b2c6512326)
-[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D/Assets
-GfxDevice: creating device client; threaded=0
-2021-07-13 09:57:47.531 Unity[45897:1903111] Color LCD preferred device: Intel HD Graphics 4000 (low power)
-2021-07-13 09:57:47.531 Unity[45897:1903111] Metal devices available: 1
-2021-07-13 09:57:47.531 Unity[45897:1903111] 0: Intel HD Graphics 4000 (low power)
-2021-07-13 09:57:47.532 Unity[45897:1903111] Using device Intel HD Graphics 4000 (low power)
-Initializing Metal device caps: Intel HD Graphics 4000
