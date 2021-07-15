@@ -8,11 +8,14 @@ public class ScoreKeeper : MonoBehaviour
     public int Score;
     public Text ScoreText;
 
+
     // Start is called before the first frame update
     void Start()
     {
-
+   
     }
+
+   
 
     // Update is called once per frame
     void Update()
@@ -22,8 +25,8 @@ public class ScoreKeeper : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        AddScore();
         Destroy(other.gameObject);
+        AddScore();
     }
 
     void AddScore()
