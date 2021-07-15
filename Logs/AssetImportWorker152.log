@@ -1,0 +1,71 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker152
+-projectPath
+/Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
+-logFile
+Logs/AssetImportWorker152.log
+-srvPort
+49562
+Successfully changed project path to: /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
+/Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
+Using Asset Import Pipeline V2.
+Assertion failed on expression: 'm_ErrorCode == MDB_MAP_RESIZED || !HasAbortingErrors()'
+
+Asset database transaction committed twice!
+
+Assertion failed on expression: 'errors == MDB_SUCCESS || errors == MDB_NOTFOUND'
+
+Assertion failed on expression: 'm_ErrorCode == MDB_MAP_RESIZED || !HasAbortingErrors()'
+
+Asset database transaction committed twice!
+
+Assertion failed on expression: 'errors == MDB_SUCCESS || errors == MDB_NOTFOUND'
+
+Assertion failed on expression: 'm_ErrorCode == MDB_MAP_RESIZED || !HasAbortingErrors()'
+
+Asset database transaction committed twice!
+
+Assertion failed on expression: 'errors == MDB_SUCCESS || errors == MDB_NOTFOUND'
+
+Refreshing native plugins compatible for Editor in 0.14 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D/Assets
+GfxDevice: creating device client; threaded=0
+2021-07-15 11:25:33.433 Unity[3320:115033] Color LCD preferred device: Intel HD Graphics 4000 (low power)
+2021-07-15 11:25:33.433 Unity[3320:115033] Metal devices available: 1
+2021-07-15 11:25:33.433 Unity[3320:115033] 0: Intel HD Graphics 4000 (low power)
+2021-07-15 11:25:33.434 Unity[3320:115033] Using device Intel HD Graphics 4000 (low power)
+Initializing Metal device caps: Intel HD Graphics 4000
+Assertion failed on expression: 'm_ErrorCode == MDB_MAP_RESIZED || !HasAbortingErrors()'
+
+Asset database transaction committed twice!
+
+Assertion failed on expression: 'errors == MDB_SUCCESS || errors == MDB_NOTFOUND'
+
+Assertion failed on expression: 'm_ErrorCode == MDB_MAP_RESIZED || !HasAbortingErrors()'
+
+Asset database transaction committed twice!
+
+Assertion failed on expression: 'errors == MDB_SUCCESS || errors == MDB_NOTFOUND'
+
+Assertion failed on expression: 'm_ErrorCode == MDB_MAP_RESIZED || !HasAbortingErrors()'
+
+Asset database transaction committed twice!
+
+Assertion failed on expression: 'errors == MDB_SUCCESS || errors == MDB_NOTFOUND'
+
+Assertion failed on expression: 'm_ErrorCode == MDB_MAP_RESIZED || !HasAbortingErrors()'
+
+Asset database transaction committed twice!
+
+Assertion failed on expression: 'errors == MDB_SUCCESS || errors == MDB_NOTFOUND'
+

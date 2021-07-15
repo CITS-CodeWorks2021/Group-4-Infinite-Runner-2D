@@ -9,7 +9,7 @@ public class ScoreBoard : MonoBehaviour
     public int lowestScore;
     public int currentScore;
     public List<int> highScores;
-
+   
     public Text t_lowScore, t_curScore, t_highScores;
 
     bool newHigh, newLow, newHighest;
@@ -100,6 +100,6 @@ public class ScoreBoard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+  
     }
 }

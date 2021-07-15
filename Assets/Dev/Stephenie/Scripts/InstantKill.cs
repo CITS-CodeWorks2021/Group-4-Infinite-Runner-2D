@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InstantKill : MonoBehaviour
 {
+    public static UnityEvent playerDies = new UnityEvent();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +25,6 @@ public class InstantKill : MonoBehaviour
         {
             Destroy(gameObject); //Then destroy the player
         }
+        playerDies.Invoke();
     }
 }
