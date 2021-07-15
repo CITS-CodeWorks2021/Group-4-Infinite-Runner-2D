@@ -23,7 +23,7 @@ public class ScoreKeeper : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         AddScore();
-        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
 
     void AddScore()
