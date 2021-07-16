@@ -12,24 +12,24 @@ AssetImportWorker71
 -logFile
 Logs/AssetImportWorker71.log
 -srvPort
-59967
+49562
 Successfully changed project path to: /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
 /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 950.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 812.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D/Assets
 GfxDevice: creating device client; threaded=0
-2021-07-14 10:38:47.874 Unity[50616:2124444] Color LCD preferred device: Intel HD Graphics 4000 (low power)
-2021-07-14 10:38:47.874 Unity[50616:2124444] Metal devices available: 1
-2021-07-14 10:38:47.874 Unity[50616:2124444] 0: Intel HD Graphics 4000 (low power)
-2021-07-14 10:38:47.875 Unity[50616:2124444] Using device Intel HD Graphics 4000 (low power)
+2021-07-15 10:44:04.629 Unity[2835:96534] Color LCD preferred device: Intel HD Graphics 4000 (low power)
+2021-07-15 10:44:04.630 Unity[2835:96534] Metal devices available: 1
+2021-07-15 10:44:04.630 Unity[2835:96534] 0: Intel HD Graphics 4000 (low power)
+2021-07-15 10:44:04.631 Unity[2835:96534] Using device Intel HD Graphics 4000 (low power)
 Initializing Metal device caps: Intel HD Graphics 4000
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56835
 Begin MonoManager ReloadAssembly
