@@ -12,43 +12,24 @@ AssetImportWorker23
 -logFile
 Logs/AssetImportWorker23.log
 -srvPort
-59967
+49562
 Successfully changed project path to: /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
 /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 549.23 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 870.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D/Assets
 GfxDevice: creating device client; threaded=0
-2021-07-14 10:01:22.940 Unity[50326:2108810] Color LCD preferred device: Intel HD Graphics 4000 (low power)
-2021-07-14 10:01:22.940 Unity[50326:2108810] Metal devices available: 1
-2021-07-14 10:01:22.940 Unity[50326:2108810] 0: Intel HD Graphics 4000 (low power)
-2021-07-14 10:01:22.941 Unity[50326:2108810] Using device Intel HD Graphics 4000 (low power)
+2021-07-15 09:28:04.184 Unity[2237:69548] Color LCD preferred device: Intel HD Graphics 4000 (low power)
+2021-07-15 09:28:04.184 Unity[2237:69548] Metal devices available: 1
+2021-07-15 09:28:04.184 Unity[2237:69548] 0: Intel HD Graphics 4000 (low power)
+2021-07-15 09:28:04.185 Unity[2237:69548] Using device Intel HD Graphics 4000 (low power)
 Initializing Metal device caps: Intel HD Graphics 4000
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56326
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56237
 Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: /Applications/Unity/Hub/Editor/2020.3.12f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: /Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Register platform support module: /Applications/Unity/Hub/Editor/2020.3.12f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: /Applications/Unity/Hub/Editor/2020.3.12f1/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Register platform support module: /Applications/Unity/Hub/Editor/2020.3.12f1/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.092160 seconds.
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 72.82 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in 19.096 seconds
-Platform modules already initialized, skipping
-Registering precompiled user dll's ...
-Registered in 0.078945 seconds.
