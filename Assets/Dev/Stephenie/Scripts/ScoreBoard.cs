@@ -5,101 +5,81 @@ using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
+    private Transform entryContainer;
+    private Transform entryTemplate;
+    private List<HighscoreEntry> highscoreEntryList;
+    private List<Transform> highscoreEntryTransformList;
 
-    public int lowestScore;
-    public int currentScore;
-    public List<int> highScores;
-   
-    public Text t_lowScore, t_curScore, t_highScores;
-
-    bool newHigh, newLow, newHighest;
-
-    // First we get the scores which already exist
-    void Start()
+    private void Awake()
     {
-        // 4 high scores
-        // 1 low
-        if (PlayerPrefs.HasKey("firstScore")) highScores.Add(PlayerPrefs.GetInt("firstScore"));
-        if (PlayerPrefs.HasKey("secondScore")) highScores.Add(PlayerPrefs.GetInt("secondScore"));
-        if (PlayerPrefs.HasKey("thirdScore")) highScores.Add(PlayerPrefs.GetInt("thirdScore"));
-        if (PlayerPrefs.HasKey("fourthScore")) highScores.Add(PlayerPrefs.GetInt("fourthScore"));
+        entryContainer = transform.Find("Score Board Entry Container");
+        entryTemplate = entryContainer.Find("Score Board Entry Template");
 
-        if (PlayerPrefs.HasKey("lowScore")) lowestScore = PlayerPrefs.GetInt("lowScore");
+        entryTemplate.gameObject.SetActive(false);
 
-        // Current score
-        // lowest score
-        // highest score
-    }
-
-    public void AddScore(int newScore)
-    {
-        bool newHighScore = false;
-        foreach (int i in highScores)
+        highscoreEntryList = new List<HighscoreEntry>()
         {
-            if (i < newScore) newHighScore = true;
+            new HighscoreEntry { score = 20, name = "Mina" },
+            new HighscoreEntry { score = 14, name = "Leslie" },
+            new HighscoreEntry { score = 3, name = "Martin" },
+            new HighscoreEntry { score = 9, name = "Ronald" },
+        };
+
+        for (int i = 0; i < highscoreEntryList.Count; i++)
+        {
+            for (int j = i + 1; j < highscoreEntryList.Count; j++)
+            {
+                if(highscoreEntryList[j].score > highscoreEntryList[i].score)
+                {
+                    HighscoreEntry tmp = highscoreEntryList[i];
+                    highscoreEntryList[i] = highscoreEntryList[j];
+                    highscoreEntryList[j] = tmp;
+                }
+            }
         }
-
-        if (newHighScore)
+        highscoreEntryTransformList = new List<Transform>();
+        foreach (HighscoreEntry highscoreEntry in highscoreEntryList)
         {
-            highScores.Add(newScore);
-            highScores.Sort();
-            highScores.Reverse();
-            if (highScores.Count > 4) highScores.Capacity = 4;
-            newHigh = true;
-            if (highScores[0] == newScore) newHighest = true;
-        }
-
-        if (newScore < lowestScore)
-        {
-            lowestScore = newScore;
-            newLow = true;
-        }
-
-
-        if (newLow)
-        {
-            // do a new Low stuff
-
-        }
-        if (newHigh)
-        {
-
-        }
-        if (newHighest)
-        {
-
-        }
-
-        WriteScores();
-        UpdateUI();
-    }
-
-    public void UpdateUI()
-    {
-        t_curScore.text = currentScore.ToString();
-        t_lowScore.text = currentScore.ToString();
-
-        for (int i = 0; i < highScores.Count; i++)
-        {
-            t_highScores.text = highScores[i].ToString() + "\n";
+            CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
     }
 
-
-    public void WriteScores()
+    
+    private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
-        if (highScores.Count > 0) PlayerPrefs.SetInt("firstScore", highScores[0]);
-        if (highScores.Count > 1) PlayerPrefs.SetInt("secondScore", highScores[1]);
-        if (highScores.Count > 2) PlayerPrefs.SetInt("thirdScore", highScores[2]);
-        if (highScores.Count > 3) PlayerPrefs.SetInt("fourthScore", highScores[3]);
+            float templateHeight = 35f;
+            Transform entryTransform = Instantiate(entryTemplate, container);
+            RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
+            entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
+            entryTransform.gameObject.SetActive(true);
 
-        PlayerPrefs.SetFloat("lowScore", lowestScore);
+            int rank = transformList.Count + 1;
+            string rankString;
+            switch (rank)
+            {
+                default:
+                    rankString = rank + "th"; break;
+
+                case 1: rankString = "1st"; break;
+                case 2: rankString = "2nd"; break;
+                case 3: rankString = "3rd"; break;
+            }
+
+        entryTransform.Find("Position Entry One").GetComponent<Text>().text = rankString;
+
+        int score = highscoreEntry.score;
+
+        entryTransform.Find("Score Entry One").GetComponent<Text>().text = score.ToString();
+
+        string name = highscoreEntry.name;
+        entryTransform.Find("Name Entry One").GetComponent<Text>().text = name;
+
+        transformList.Add(entryTransform);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private class HighscoreEntry
     {
-  
+        public int score;
+        public string name;
     }
 }
