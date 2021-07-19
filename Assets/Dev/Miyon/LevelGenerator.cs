@@ -8,7 +8,7 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField] private Transform levelPart_Start;
     [SerializeField] private List<Transform> levelPartList;
-    [SerializeField] private Player player;
+    [SerializeField] private  Transform player;
 
     private Vector3 lastEndPosition;
 
@@ -26,7 +26,7 @@ public class LevelGenerator : MonoBehaviour
 
         private void Update()
         {
-            if (Vector3.Distance(character.GetPosition(), lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
+            if (Vector3.Distance(player.transform.position, lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
             {
                 //Spawn another level part
                 SpawnLevelPart();

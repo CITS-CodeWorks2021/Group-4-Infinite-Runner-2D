@@ -1782,8 +1782,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1924506186}
-  - {fileID: 486616627}
   - {fileID: 1118661745}
+  - {fileID: 486616627}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2095,12 +2095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b90c73d152674587be1f599ae908329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowestScore: 0
-  currentScore: 0
-  highScores: 00000000000000000000000000000000
-  t_lowScore: {fileID: 611228372}
-  t_curScore: {fileID: 1085099388}
-  t_highScores: {fileID: 1812012850}
 --- !u!1 &1253811621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,8 +3157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: 0
   ScoreText: {fileID: 0}
-  scoreBoard: {fileID: 0}
-  endScoreBoard: {fileID: 0}
 --- !u!114 &1588595928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4709,6 +4701,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09eebadc6254ba649af85f7f4c9545c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelPart_Start: {fileID: 0}
+  levelPartList: []
+  player: {fileID: 0}
 --- !u!4 &2041647449
 Transform:
   m_ObjectHideFlags: 0

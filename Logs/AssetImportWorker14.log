@@ -6,11 +6,11 @@ Using pre-set license
 -batchMode
 -noUpm
 -name
-AssetImportWorker21
+AssetImportWorker14
 -projectPath
 /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
 -logFile
-Logs/AssetImportWorker21.log
+Logs/AssetImportWorker14.log
 -srvPort
 51300
 Successfully changed project path to: /Users/stephenieprovidence/Documents/Group 4 Infinite Runner 2D
