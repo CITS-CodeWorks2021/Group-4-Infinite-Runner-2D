@@ -10,10 +10,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Platform Layer
+  - 
   - Water
   - UI
-  - Ground Layer
+  - 
   - 
   - 
   - 
@@ -42,13 +42,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Platforms
-    uniqueID: 4006004261
-    locked: 0
-  - name: Items
-    uniqueID: 2614338397
-    locked: 0
-  - name: Ground
-    uniqueID: 1914177167
     locked: 0
