@@ -14,16 +14,22 @@ public class ScoreBoard : MonoBehaviour
     {
         entryContainer = transform.Find("Score Board Entry Container");
         entryTemplate = entryContainer.Find("Score Board Entry Template");
-
+        Debug.Log(highscoreEntryList);
+        Debug.Log(highscoreEntryTransformList);
         entryTemplate.gameObject.SetActive(false);
 
-        highscoreEntryList = new List<HighscoreEntry>()
-        {
-            new HighscoreEntry { score = 20, name = "Mina" },
-            new HighscoreEntry { score = 14, name = "Leslie" },
-            new HighscoreEntry { score = 3, name = "Martin" },
-            new HighscoreEntry { score = 9, name = "Ronald" },
-        };
+        /*highscoreEntryList = new List<HighscoreEntry>()
+         {
+             new HighscoreEntry { score = 20, name = "Mina" },
+             new HighscoreEntry { score = 14, name = "Leslie" },
+             new HighscoreEntry { score = 3, name = "Martin" },
+             new HighscoreEntry { score = 9, name = "Ronald" },
+         };*/
+
+        PlayerPrefs.HasKey("highscoreTable");
+
+        string jsonString = PlayerPrefs.GetString("highscoreTable");
+        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         for (int i = 0; i < highscoreEntryList.Count; i++)
         {
@@ -42,6 +48,14 @@ public class ScoreBoard : MonoBehaviour
         {
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
+
+        
+        Highscores highscores = new Highscores { highscoreEntryList = highscoreEntryList };
+        string json = JsonUtility.ToJson(highscores);
+        PlayerPrefs.SetString("highscoreTable", json);
+        PlayerPrefs.Save();
+        Debug.Log(PlayerPrefs.GetString("highscoreTable"));
+        
     }
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
@@ -76,6 +90,12 @@ public class ScoreBoard : MonoBehaviour
         transformList.Add(entryTransform);
     }
 
+    private class Highscores
+    {
+        public List<HighscoreEntry> highscoreEntryList;
+    }
+
+    [System.Serializable]
     private class HighscoreEntry
     {
         public int score;
