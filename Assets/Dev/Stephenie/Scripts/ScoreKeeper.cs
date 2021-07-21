@@ -7,13 +7,12 @@ public class ScoreKeeper : MonoBehaviour
 {
     public int Score;
     public Text ScoreText;
-    public ScoreBoard scoreBoard;
-    public GameObject endScoreBoard;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        InstantKill.playerDies.AddListener(EndGame); 
+
     }
 
    
@@ -36,9 +35,4 @@ public class ScoreKeeper : MonoBehaviour
         ScoreText.text = Score.ToString();
     }
 
-    void EndGame()
-    {
-        scoreBoard.AddScore(Score);
-        endScoreBoard.SetActive(true);
-    }
 }
