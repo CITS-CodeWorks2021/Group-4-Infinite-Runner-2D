@@ -23,6 +23,8 @@ public class InstantKill : MonoBehaviour
         if (col2D.gameObject.CompareTag("Obstacle")) //If object hit is tagged "Obstacle"
         {
             Destroy(gameObject); //Then destroy the player
+            FindObjectOfType<GameController>().EndGame();
+            
         }
     }
 }
